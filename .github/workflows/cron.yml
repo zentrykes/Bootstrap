@@ -29,7 +29,8 @@ jobs:
             echo "No changes from upstream. Exiting with success."
             exit 0
           fi
-          git pull  --rebase upstream main
+          git reset --hard origin/main
+          git pull --rebase upstream main
           git add .
           git commit -m "Sync with RootHide/Bootstrap"
           git push origin main
