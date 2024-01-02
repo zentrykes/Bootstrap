@@ -27,8 +27,9 @@ jobs:
           git checkout -b sync-branch
           git pull --rebase upstream main
           git checkout main
-          git checkout --ours README.md
-          git add README.md
+          git checkout --ours README.md || true
+          git add -A
+          git rebase --continue || true
           git branch -D sync-branch
 
   build:
