@@ -30,7 +30,7 @@ jobs:
                     exit 0
           fi
           git pull --rebase upstream main
-          cwd
+          pwd
           ls -l
 
   build:
