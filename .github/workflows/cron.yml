@@ -24,8 +24,10 @@ jobs:
           git remote add upstream https://github.com/RootHide/Bootstrap
           git fetch upstream
           git fetch --all --prune
-          git checkout --ours README.md
           git pull --rebase upstream main
+          git checkout --ours README.md
+          git add README.md
+          git rebase --continue
 
       - name: Debug Output
         run: |
