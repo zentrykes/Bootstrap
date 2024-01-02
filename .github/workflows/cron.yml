@@ -31,9 +31,6 @@ jobs:
           fi
           git reset --hard origin/main
           git pull --rebase upstream main
-          git add -u
-          git add .
-          git rebase --continue
           git push origin main
 
   build:
