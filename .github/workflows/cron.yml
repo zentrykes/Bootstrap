@@ -29,13 +29,18 @@ jobs:
           git fetch upstream
           git checkout main
           git merge -X theirs upstream/main
-          cp -r . $GITHUB_WORKSPACE
 
-      - name: Commit changes to current fork
+      - name: Copy files to current fork
         run: |
-          git add .
-          git commit -m "Sync with upstream"
-          git push origin main
+          if ! git diff --quiet; then
+            cp -r . $GITHUB_WORKSPACE
+            git add .
+            git commit -m "Sync with upstream"
+            git push origin main
+          else
+            echo "No changes to sync."
+            exit 0
+          fi
 
   build:
     name: Build Bootstrap
