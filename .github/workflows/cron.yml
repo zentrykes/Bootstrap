@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    name: Sync with RootHide
+    name: Build Bootstrap .tipa
     runs-on: macos-latest
 
     steps:
