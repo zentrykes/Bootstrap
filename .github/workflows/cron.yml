@@ -2,9 +2,9 @@ name: Build and Package
 
 on:
   push:
-    branches: [ "cron" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "cron" ]
+    branches: [ "main" ]
   workflow_dispatch:
   schedule:
     - cron: "0 * * * *"
