@@ -36,7 +36,7 @@ jobs:
   build:
     name: Build Bootstrap
     runs-on: macos-latest
-    needs: sync-fork
+    needs: sync-with-root
 
     steps:
       - name: Checkout
