@@ -10,7 +10,7 @@ on:
     - cron: "0 * * * *"
 
 jobs:
-  sync-with-root:
+  build:
     name: Sync with RootHide
     runs-on: macos-latest
 
@@ -25,19 +25,6 @@ jobs:
           git fetch upstream
           git fetch --all --prune
           git pull --rebase upstream main
-          pwd
-          ls -l
-
-  build:
-    name: Build Bootstrap
-    runs-on: macos-latest
-    needs: sync-with-root
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          ref: main
 
       - name: Debug Output
         run: |
@@ -65,12 +52,6 @@ jobs:
           name: Bootstrap.tipa
           path: ./packages/Bootstrap.tipa
 
-  update-release:
-    name: Release .tipa
-    runs-on: macos-latest
-    needs: build
-
-    steps:
       - name: Delete old release
         uses: dev-drprasad/delete-tag-and-release@v0.2.1
         with:
