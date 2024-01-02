@@ -11,12 +11,13 @@ on:
 
 jobs:
   build:
-    name: Build Bootstrap .tipa
+    name: Build RootHide Bootstrap .tipa
     runs-on: macos-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Set up Git
         run: |
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
@@ -25,13 +26,8 @@ jobs:
           git fetch upstream
           git fetch --all --prune
           git pull --rebase --strategy-option=theirs upstream main
-
-      - name: Debug Output
-        run: |
-          pwd
-          ls -l
     
-      - name: Install brew
+      - name: Install Homebrew
         run: bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh')"
 
       - name: Install Theos
@@ -40,13 +36,13 @@ jobs:
       - name: Install make
         run: brew install make
 
-      - name: Setup Environment
+      - name: Setup Theos environment
         run: echo "THEOS=~/theos" >> $GITHUB_ENV
 
-      - name: Make Bootstrap Package
+      - name: Make bootstrap package
         run: gmake -j$(sysctl -n hw.ncpu) package
 
-      - name: Upload Artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: Bootstrap.tipa
@@ -59,15 +55,17 @@ jobs:
           tag_name: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Get artifacts
+
+      - name: Get bootstrap artifact
         uses: actions/download-artifact@v3
         with:
           name: Bootstrap.tipa
+
       - name: Create new release
         uses: ncipollo/release-action@v1
         with:
-          name: Rolling Release
-          body: These are automatically updated builds of the latest Bootstrap commit.
+          name: Rolling Bootstrap Release
+          body: This is an automatically updated build of the latest RootHide Bootstrap commit.
           artifacts: "Bootstrap.tipa"
           tag: release
           token: ${{ secrets.GITHUB_TOKEN }}
