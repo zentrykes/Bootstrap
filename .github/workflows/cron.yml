@@ -30,7 +30,6 @@ jobs:
                     exit 0
           fi
           git pull --rebase upstream main
-          git push origin main
 
   build:
     name: Build Bootstrap
