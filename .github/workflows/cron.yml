@@ -20,6 +20,7 @@ jobs:
       - name: Set up Git
         run: |
           rm README.md
+          git commit -am "Removed local README"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global user.name "${GITHUB_ACTOR}"
           git remote add upstream https://github.com/RootHide/Bootstrap
