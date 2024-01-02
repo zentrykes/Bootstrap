@@ -44,6 +44,9 @@ jobs:
         with:
           submodules: true
 
+      - name: List directory
+        run: ls -l .
+
       - name: Install brew
         run: bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh')"
 
@@ -55,9 +58,6 @@ jobs:
 
       - name: Setup Environment
         run: echo "THEOS=~/theos" >> $GITHUB_ENV
-
-      - name: List directory
-        run: ls -l .
 
       - name: Make Bootstrap Package
         run: gmake -j$(sysctl -n hw.ncpu) package
