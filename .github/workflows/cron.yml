@@ -27,7 +27,7 @@ jobs:
           git pull --rebase upstream main
           git checkout -f --ours README.md
           git add README.md
-          git rebase --continue
+          git rebase --skip
 
       - name: Debug Output
         run: |
