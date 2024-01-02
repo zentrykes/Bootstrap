@@ -25,7 +25,7 @@ jobs:
           git fetch upstream
           git fetch --all --prune
           git pull --rebase upstream main
-          git add README.md
+          git rebase -X theirs
           git rebase --continue
 
       - name: Debug Output
