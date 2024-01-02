@@ -30,17 +30,20 @@ jobs:
           git checkout main
           git merge -X theirs upstream/main
 
-      - name: Copy files to current fork
+      - name: Check for changes
         run: |
-          if ! git diff --quiet; then
-            cp -r . $GITHUB_WORKSPACE
-            git add .
-            git commit -m "Sync with upstream"
-            git push origin main
-          else
-            echo "No changes to sync."
+          if git diff --exit-code; then
+            echo "No changes to sync. Exiting with success."
             exit 0
           fi
+
+      - name: Copy files to current repo
+        run: |
+          find . -maxdepth 1 ! -name '.github' -exec rm -rf {} \;
+          cp -r ./* $GITHUB_WORKSPACE
+          git add .
+          git commit -m "Sync with upstream"
+          git push origin main
 
   build:
     name: Build Bootstrap
