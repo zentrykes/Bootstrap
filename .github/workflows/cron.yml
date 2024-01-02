@@ -9,12 +9,6 @@ on:
   schedule:
     - cron: "0 * * * *"
 
-name: Sync with RootHide
-
-on:
-  schedule:
-    - cron: "0 * * * *"
-
 jobs:
   sync-with-root:
     name: Sync with RootHide
