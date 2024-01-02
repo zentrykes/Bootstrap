@@ -50,6 +50,12 @@ jobs:
       - name: Setup Environment
         run: echo "THEOS=~/theos" >> $GITHUB_ENV
 
+      - name: Debug
+        run: |
+          ls -l .
+          ls -l ./Bootstrap/
+        
+
       - name: Make Bootstrap Package
         run: gmake -j$(sysctl -n hw.ncpu) package
 
