@@ -25,7 +25,7 @@ jobs:
           git remote add upstream https://github.com/RootHide/Bootstrap
           git fetch upstream
           git checkout main
-          git reset --hard upstream/main
+          git merge upstream/main
 
   build:
     name: Build Bootstrap
