@@ -26,11 +26,14 @@ jobs:
           git fetch --all --prune
           CHANGES=$(git rev-list HEAD...upstream/main --count)
           if [ $CHANGES -eq 0 ]; then
-              echo "No changes from upstream. Exiting with success."
-              exit 0
+                    echo "No changes from upstream. Exiting with success."
+                    exit 0
           fi
           git reset --hard origin/main
           git pull --rebase upstream main
+          git add -u
+          git add .
+          git rebase --continue
           git push origin main
 
   build:
