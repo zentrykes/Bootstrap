@@ -38,6 +38,12 @@ jobs:
     needs: sync-with-root
 
     steps:
+      - name: Debug Output
+        run: |
+          pwd
+          ls -l
+          echo "THEOS=${THEOS}"
+    
       - name: Install brew
         run: bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh')"
 
@@ -61,7 +67,7 @@ jobs:
 
   update-release:
     name: Release .tipa
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     needs: build
 
     steps:
