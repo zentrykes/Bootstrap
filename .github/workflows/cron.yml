@@ -2,9 +2,9 @@ name: Build and Package
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "cron" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "cron" ]
   workflow_dispatch:
   schedule:
     - cron: "0 * * * *"
@@ -25,7 +25,7 @@ jobs:
           git remote add upstream https://github.com/RootHide/Bootstrap
           git fetch upstream
           git checkout main
-          git merge upstream/main
+          git merge upstream/cron
 
   build:
     name: Build Bootstrap
