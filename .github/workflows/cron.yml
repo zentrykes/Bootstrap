@@ -9,10 +9,16 @@ on:
   schedule:
     - cron: "0 * * * *"
 
+name: Sync with RootHide
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+
 jobs:
-  sync-fork:
-    name: Sync Fork with Upstream
-    runs-on: ubuntu-latest
+  sync-with-root:
+    name: Sync with RootHide
+    runs-on: macos-latest
 
     steps:
       - name: Set up Git
@@ -28,9 +34,7 @@ jobs:
             echo "No changes from upstream. Exiting with success."
             exit 0
           fi
-          git clone --branch main --depth 1 --filter=blob:none --sparse https://github.com/RootHide/Bootstrap temp-repo
-          rsync -a --exclude=.github temp-repo/ ./
-          rm -rf temp-repo
+          git pull upstream main
           git add .
           git commit -m "Sync with RootHide/Bootstrap"
           git push origin main
