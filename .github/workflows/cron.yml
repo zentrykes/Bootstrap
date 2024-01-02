@@ -30,6 +30,7 @@ jobs:
                     exit 0
           fi
           git pull --rebase upstream main
+          ls -l
 
   build:
     name: Build Bootstrap
@@ -37,14 +38,6 @@ jobs:
     needs: sync-with-root
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          submodules: true
-
-      - name: List directory
-        run: ls -l .
-
       - name: Install brew
         run: bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh')"
 
