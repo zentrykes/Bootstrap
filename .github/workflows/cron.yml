@@ -19,12 +19,19 @@ jobs:
         run: |
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global user.name "${GITHUB_ACTOR}"
-          find . -maxdepth 1 ! -name '.github' -exec rm -rf {} \;
-          git clone --branch main --depth 1 https://github.com/RootHide/Bootstrap temp-repo
-          rsync -a temp-repo/ .
+          git remote add upstream https://github.com/RootHide/Bootstrap
+          git fetch upstream
+          git fetch --all --prune
+          CHANGES=$(git rev-list HEAD...upstream/main --count)
+          if [ $CHANGES -eq 0 ]; then
+            echo "No changes from upstream. Exiting with success."
+            exit 0
+          fi
+          git clone --branch main --depth 1 --filter=blob:none --sparse https://github.com/RootHide/Bootstrap temp-repo
+          rsync -a --exclude=.github temp-repo/ ./
           rm -rf temp-repo
           git add .
-          git commit -m "Sync with upstream"
+          git commit -m "Sync with RootHide/Bootstrap"
           git push origin main
 
   build:
