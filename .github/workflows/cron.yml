@@ -24,11 +24,6 @@ jobs:
           git remote add upstream https://github.com/RootHide/Bootstrap
           git fetch upstream
           git fetch --all --prune
-          CHANGES=$(git rev-list HEAD...upstream/main --count)
-          if [ $CHANGES -eq 0 ]; then
-                    echo "No changes from upstream. Exiting with success."
-                    exit 0
-          fi
           git pull --rebase upstream main
           pwd
           ls -l
