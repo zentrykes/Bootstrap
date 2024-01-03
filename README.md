@@ -1,4 +1,5 @@
 ## This repository is an auto building `.tipa` cronjob and is not affiliated with RootHide. You can download the latest `.tipa` by clicking [here](https://github.com/dleovl/Bootstrap/releases/download/release/Bootstrap.tipa). The cronjob runs hourly and pulls all commits, building within around 5 minutes.
+## No other auto-built Bootstrap repository is as advanced as this one! If you appreciate the work, leave a star, and recommend it to your friends using those non-automatic (or poorly automated) building `.yml`s. 😉
 # Bootstrap
 
 [![GitHub stars](https://img.shields.io/github/stars/RootHide/Bootstrap?style=social)](https://github.com/RootHide/Bootstrap/stargazers)
