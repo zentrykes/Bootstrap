@@ -1,10 +1,10 @@
-name: Build and Package
+name: Build RootHide Bootstrap .tipa
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
   schedule:
     - cron: "0 * * * *"
@@ -18,7 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Git
+      - name: Fetch from upstream repository RootHide/Bootstrap
         run: |
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global user.name "${GITHUB_ACTOR}"
@@ -31,7 +31,7 @@ jobs:
         run: bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh')"
 
       - name: Install Theos
-        run: bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos')"
+        run: bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/RootHide/Theos/master/bin/install-theos')"
 
       - name: Install make
         run: brew install make
@@ -39,10 +39,10 @@ jobs:
       - name: Setup Theos environment
         run: echo "THEOS=~/theos" >> $GITHUB_ENV
 
-      - name: Make bootstrap package
+      - name: Make RootHide Bootstrap .tipa
         run: gmake -j$(sysctl -n hw.ncpu) package
 
-      - name: Upload artifact
+      - name: Upload .tipa artifact
         uses: actions/upload-artifact@v3
         with:
           name: Bootstrap.tipa
@@ -56,15 +56,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Get bootstrap artifact
+      - name: Get RootHide Bootstrap .tipa artifact
         uses: actions/download-artifact@v3
         with:
           name: Bootstrap.tipa
 
-      - name: Create new release
+      - name: Create new rolling release
         uses: ncipollo/release-action@v1
         with:
-          name: Rolling Bootstrap Release
+          name: Rolling RootHide Bootstrap Release
           body: This is an automatically updated build of the latest RootHide Bootstrap commit.
           artifacts: "Bootstrap.tipa"
           tag: release
