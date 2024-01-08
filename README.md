@@ -65,7 +65,7 @@ You will need to enable Settings (com.apple.Preferences) in AppEnabler to have t
 
 ## Discord
 
-You can join our Discord for support or general talk [here](https://discord.com/invite/scqCkumAYp).
+You can join our Discord for support or general talk [here](https://discord.com/invite/scqCkumAYp). There's a FAQ channel if you need any more information.
 
 ## Credits
 
