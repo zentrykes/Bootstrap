@@ -1,5 +1,5 @@
 ## dleovl says:
-This repository contains automatically built `.tipa` files of the [RootHide Bootstrap](https://github.com/RootHide/Bootstrap) thats pulled from upstream and built hourly. *This is the **ONLY** trustworthy repository that does this, until building is officially supported by the developer*. If this helped you, leave a star.
+This repository contains automatically built `.tipa` files of the [RootHide Bootstrap](https://github.com/RootHide/Bootstrap) thats pulled from upstream and built hourly. *This is the **ONLY** trustworthy repository that does this, until building is officially supported by the developer*. If this helped you, feel free to leave a star.
 
 This repository is not affiliated with RootHide or its developers. You can download the `.tipa` by clicking [here](https://github.com/dleovl/Bootstrap/releases/download/release/Bootstrap.tipa). As this repository builds hourly, you may need to wait until the next build when a commit is pushed. Check the Actions tab to see when the last run was made. Building usually takes no more than five minutes.
 
