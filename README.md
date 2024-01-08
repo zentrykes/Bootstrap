@@ -1,6 +1,8 @@
 ## dleovl says:
 *Note: This repository has multiple branches. This is the [auto-build branch](https://github.com/dleovl/Bootstrap). There is also a [FAQ branch](https://github.com/dleovl/Bootstrap/tree/faq) and branches for patch PRs.*
 
+**DISCLAIMER: *DO NOT* use the builds in this repository if you *DON'T* know what you're doing. This is only for advanced users. Refer to the [building instructions in the FAQ](https://github.com/dleovl/Bootstrap/tree/faq#how-do-i-build-the-roothide-bootstrap-no-pcmac-required) for building.**
+
 This repository contains automatically built `.tipa` files of the [RootHide Bootstrap](https://github.com/RootHide/Bootstrap) thats pulled from upstream and built hourly. *This is the **ONLY** trustworthy repository that does this, until building is officially supported by the developer*. If this helped you, feel free to leave a star.
 
 **You can download the `.tipa` by clicking [here](https://github.com/dleovl/Bootstrap/releases/download/release/Bootstrap.tipa). As this repository builds hourly, you may need to wait until the next build when a commit is pushed. Check the Actions tab to see when the last run was made. Building usually takes no more than five minutes. If a build fails from a failed Theos install, you can wait until the next action runs or a workflow dispatch can be triggered.**
