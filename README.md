@@ -1,7 +1,7 @@
 ## dleovl says:
 *Note: This repository has multiple branches. This is the [auto-build branch](https://github.com/dleovl/Bootstrap). There is also a [FAQ branch](https://github.com/dleovl/Bootstrap/tree/faq) and branches for patch PRs.*
 
-**DISCLAIMER: *DO NOT* use the builds in this repository if you *DON'T* know what you're doing. This is only for advanced users. Refer to the [building instructions in the FAQ](https://github.com/dleovl/Bootstrap/tree/faq#how-do-i-build-the-roothide-bootstrap-no-pcmac-required) for building.**
+**DISCLAIMER: *DO NOT* use the builds in this repository if you *DON'T* know what you're doing. This is only for advanced users who need immediate access for testing. Refer to the [building instructions in the FAQ](https://github.com/dleovl/Bootstrap/tree/faq#how-do-i-build-the-roothide-bootstrap-no-pcmac-required) for building.**
 
 This repository contains automatically built `.tipa` files of the [RootHide Bootstrap](https://github.com/RootHide/Bootstrap) thats pulled from upstream and built hourly. *This is the **ONLY** trustworthy repository that does this, until building is officially supported by the developer*. If this helped you, feel free to leave a star.
 
