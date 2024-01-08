@@ -1,5 +1,5 @@
 ## dleovl says:
-This repository has multiple branches. This is the auto-build branch. There is also a FAQ branch and branches for patch PRs.
+This repository has multiple branches. This is the [auto-build branch](https://github.com/dleovl/Bootstrap). There is also a [FAQ branch](https://github.com/dleovl/Bootstrap/tree/faq) and branches for patch PRs.
 
 This repository contains automatically built `.tipa` files of the [RootHide Bootstrap](https://github.com/RootHide/Bootstrap) thats pulled from upstream and built hourly. *This is the **ONLY** trustworthy repository that does this, until building is officially supported by the developer*. If this helped you, feel free to leave a star.
 
