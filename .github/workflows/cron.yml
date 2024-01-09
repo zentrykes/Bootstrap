@@ -1,6 +1,9 @@
 name: Build RootHide Bootstrap .tipa
 
 on:
+  push:
+    paths:
+      - ".github/workflows/cron.yml"
   pull_request:
     branches: ["main"]
   workflow_dispatch:
