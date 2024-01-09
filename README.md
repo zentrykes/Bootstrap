@@ -1,5 +1,5 @@
 [![GitHub stars](https://img.shields.io/github/stars/dleovl/Bootstrap?style=social)](https://github.com/dleovl/Bootstrap/stargazers)
-[![Build Status](https://img.shields.io/github/workflow/status/dleovl/Bootstrap/Build%20RootHide%20Bootstrap%20.tipa?label=Build&logo=github)](https://github.com/dleovl/Bootstrap/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/dleovl/Bootstrap/cron.yml?branch=main)](https://github.com/dleovl/Bootstrap/actions)
 ## dleovl says:
 *Note: This repository has multiple branches. This is the [auto-build branch](https://github.com/dleovl/Bootstrap). There is also a [FAQ branch](https://github.com/dleovl/Bootstrap/tree/faq) and branches for patch PRs.*
 
