@@ -9,6 +9,8 @@ This repository contains automatically built `.tipa` files of the [RootHide Boot
 
 **You can download the `.tipa` by clicking [here](https://github.com/dleovl/Bootstrap/releases/download/release/Bootstrap.tipa). As this repository builds hourly, you may need to wait until the next build when a commit is pushed. Check the Actions tab to see when the last run was made. Building takes no more than six minutes. If a build fails from a failed Theos install, you can wait until the next action runs or a workflow dispatch can be triggered.**
 
+### Updated RootHide Bootstrap `README.md` for context on upstream:
+
 # Bootstrap
 
 [![GitHub stars](https://img.shields.io/github/stars/RootHide/Bootstrap?style=social)](https://github.com/RootHide/Bootstrap/stargazers)
