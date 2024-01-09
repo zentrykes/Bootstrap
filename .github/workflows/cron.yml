@@ -21,7 +21,7 @@ jobs:
           REPO=${{ github.repository }}
   
           if [ "$REPO" != "dleovl/Bootstrap" ]; then
-            echo "This workflow is only allowed for dleovl/Bootstrap repository. Exiting."
+            echo "This workflow is only permitted usage for dleovl/Bootstrap repository. Exiting."
             exit 1
           fi
 
@@ -75,7 +75,9 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           name: Rolling RootHide Bootstrap Release
-          body: This is an automatically updated build of the RootHide Bootstrap that fetches from upstream and builds every hour. If this release is on anywhere except https://github.com/dleovl/Bootstrap, it was stolen.
+          body: |
+            This is an hourly updated build of the RootHide Bootstrap.
+            If this release text is on anywhere except https://github.com/dleovl/Bootstrap, it was stolen.
           artifacts: "Bootstrap.tipa"
           tag: release
           token: ${{ secrets.GITHUB_TOKEN }}
