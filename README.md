@@ -1,7 +1,7 @@
 [![Build Status](https://img.shields.io/github/actions/workflow/status/dleovl/Bootstrap/cron.yml?branch=main)](https://github.com/dleovl/Bootstrap/actions)
 [![GitHub stars](https://img.shields.io/github/stars/dleovl/Bootstrap?style=social)](https://github.com/dleovl/Bootstrap/stargazers)
 
-If a build fails from a failed Theos install, you can wait until the next action runs or a workflow dispatch can be triggered.
+If a build fails from a failed Theos install (code 8), you can wait until the next action runs or a workflow dispatch can be triggered.
 ## dleovl says:
 *Note: This repository has multiple branches. This is the [auto-build branch](https://github.com/dleovl/Bootstrap). There is also a [FAQ branch](https://github.com/dleovl/Bootstrap/tree/faq) and branches for patch PRs.*
 
