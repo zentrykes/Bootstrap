@@ -11,7 +11,7 @@ This repository contains automatically built `.tipa` files of the [RootHide Boot
 
 **You can download the `.tipa` by clicking [here](https://github.com/dleovl/Bootstrap/releases/download/release/Bootstrap.tipa). As this repository builds hourly, you may need to wait until the next build when a commit is pushed. Check the Actions tab to see when the last run was made. Building takes no more than six minutes.**
 
-### Updated RootHide Bootstrap `README.md` for context on upstream:
+### Updated RootHide Bootstrap `README.md` for context on upstream (from readme branch on this repository):
 
 # Bootstrap
 
