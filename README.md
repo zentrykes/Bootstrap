@@ -1,3 +1,5 @@
+**Warning:** Builds have been paused as the official release is out [here](https://github.com/roothide/Bootstrap/releases/).
+
 [![Build Status](https://img.shields.io/github/actions/workflow/status/dleovl/Bootstrap/cron.yml?branch=main)](https://github.com/dleovl/Bootstrap/actions)
 [![GitHub stars](https://img.shields.io/github/stars/dleovl/Bootstrap?style=social)](https://github.com/dleovl/Bootstrap/stargazers)
 
